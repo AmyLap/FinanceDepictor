@@ -1,0 +1,18 @@
+{
+    "Groceries": ["woolworths", "spar", "pnp", "Checkers","Superspar" ],
+    "Uber": ["uber rides", "uber trip", "Uber.Com"],
+    "Coffee": ["seattle", "Yoco *Vatit", "Vida E Caffe"],
+    "Vaping":  ["vape", "jj Cale"],
+    "Nights Out": ["hogshead", "tigers milk", "babylon", "lock stock And beer", "86 public", "greenhouse", "pirates"],
+    "Eating Out": ["olives & plate", " piza e vino", "tashas", "momo", "bagel", "sushi"],
+    "Ordering In": ["uber eats", "Mr D Food", "Ubereats"],
+    "Petrol": ["shell"],
+    "Pampering": ["sorbet", "old town barber"],
+    "Toiletries": ["dischem", "clicks"],
+    "Animals": ["paws claws & wings"],
+    "House": ["willie garden", "bonani", "eskom", "villa di castello", "fnb app payment to rates"],
+    "Travel": ["Tolls"],
+    "Transfer": ["transfer","balance"],
+    "Banking Fees": [],
+    "Car": ["car"]
+}
