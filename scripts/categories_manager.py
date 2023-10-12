@@ -99,10 +99,40 @@ class CategoriesManager():
         """
         if not self._categories:
             self.get_categories()
-        uncategorisedd_descriptions = []
-        for description in set(descriptions):
-            for key_word in self.list_of_all_keywords():
-                if key_word in description:
-                    continue
-            uncategorisedd_descriptions.append(description)
-        return uncategorisedd_descriptions
+        uncategorised_descriptions = descriptions
+
+        for key_word in self.list_of_all_keywords():
+            uncategorised_descriptions = [description for description in uncategorised_descriptions if key_word not in description]
+        return uncategorised_descriptions
+
+class CacheManager():
+
+    def __init__(self) -> None:
+        self.cache = {}
+        self.cache_path = os.getcwd() + "\\logs\\cache.json"
+
+    def get_cache(self, copy: bool = False):
+        
+        with open(self.cache_path, 'r') as f:
+            self.cache = json.load(f)
+        
+        self.save_cache(copy=True)
+        return self.cache
+    
+    def save_cache(self, copy: bool = False):
+        """_summary_
+
+        :param copy: _description_, defaults to False
+        :type copy: bool, optional
+        """
+        if copy:
+            self.cache_path = os.getcwd() + "\\logs\\cache_copy.json"
+        else:
+            self.cache_path = os.getcwd() + "\\logs\\cache.json"
+        if self.cache:
+            with open(self.cache_path, 'w+') as f:
+                json.dump(self.cache, f)
+
+    def add_to_cache(self, new_data):
+        self.cache = self.cache.update(new_data)
+        self.save_cache(copy=True)
