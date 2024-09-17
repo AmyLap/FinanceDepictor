@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<span>
+
+
+{% for category in categories_list %}
+<div class="d-grid gap-2">
+    <a class="btn btn-lg btn-primary" href="categories/{{category}}"  type="button">{{category}}</a>
+<div>
+{%endfor%}
+
+</span>
+
+{% endblock %}

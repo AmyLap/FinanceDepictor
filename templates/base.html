@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>The Laps's Finances</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+</head>
+
+<body class="sb-nav-fixed">
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <div id="layoutSidenav_nav">{% include "navbar1.html" %}</div>
+        </div>
+
+        <div id="layoutSidenav_content">
+            <main>
+                {% block content %}
+                {% endblock %}
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

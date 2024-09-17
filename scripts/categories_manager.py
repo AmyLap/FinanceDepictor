@@ -71,7 +71,7 @@ class CategoriesManager():
         if category not in self._categories[category]:
             self.add_category(category)
         if key_word not in self.list_of_all_keywords():
-            self._categories[category].appendd(key_word)
+            self._categories[category].append(key_word)
 
     def list_of_all_keywords(self):
         """_summary_

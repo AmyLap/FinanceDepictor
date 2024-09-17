@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<body>
+    <h1>2023</h1>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var categories = Object.keys({{ data_dict | tojson }});
+        var amount = Object.values({{ data_dict | tojson }});
+        console.log()
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels:categories,
+                datasets: [{
+                    label: 'Categories',
+                    data: amount,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+{% endblock %}

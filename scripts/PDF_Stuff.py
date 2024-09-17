@@ -51,7 +51,7 @@ class ReadPDF:
             not in flattened_list
             else True
         )
-        headers = ["Year", "Month", "Date", "Type", "Details", "Amount"]
+
         transactions = [
             line
             for line in list_of_lines
@@ -59,19 +59,19 @@ class ReadPDF:
         ]
         if credit_account:
             transactions = [
-                [self.year, self.month, line[0], line[2], line[1], line[4]]
+                [self.year, line[0].split(" ")[1][0:3], line[0], line[2], line[1], line[4]]
                 if len(line) == 5
-                else [self.year, self.month, line[0], line[2], line[1], line[3]]
+                else [self.year, line[0].split(" ")[1][0:3], line[0], line[2], line[1], line[3]]
                 for line in transactions
             ]
         else:
             transactions = [
-                [self.year, self.month, line[0], " ", line[1], line[2]]
+                [self.year, line[0].split(" ")[1][0:3], line[0], " ", line[1], line[2]]
                 if len(line) == 4
-                else [self.year, self.month, line[0], line[2], line[1], line[3]]
+                else [self.year, line[0].split(" ")[1][0:3], line[0], line[2], line[1], line[3]]
                 for line in transactions
             ]
-        transactions = [line for line in transactions if "cr" not in line[3].lower()]
+        transactions = [line for line in transactions if "cr" not in line[5].lower()]
         return transactions
 
     def discovery_table_to_df(self, list_of_lines):
@@ -102,9 +102,9 @@ class ReadPDF:
             and 4 <= len(line) <= 5
         ]
         transactions = [
-            [self.year, self.month, line[0], line[1], line[2], line[3]]
+            [self.year, line[0].split(" ")[1][0:3], line[0], line[1], line[2], line[3]]
             if len(line) == 4
-            else [self.year, self.month, line[0], line[2], line[3], line[4]]
+            else [self.year, line[0].split(" ")[1][0:3], line[0], line[2], line[3], line[4]]
             for line in transactions
         ]
 

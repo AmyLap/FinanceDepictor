@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bots Team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <img src="/static/images/TecEx_Logo.webp" class="rounded" style="width:15%" alt="Image">
+      <h1>Bots</h1>
+      <p>Select your department below to get started!</p>
+    </div>
+  </div>
+
+  <br>
+  <div class="container-fluid bg-3 text-center">
+    <div class="row">
+      {% for dept in department %}
+      <div class="col-sm-4">
+        <a href="{{dept}}""><button type=" button" class="btn btn-secondary btn-lg btn-block">{{dept}}</button></a>
+        <br>
+      </div>
+      {% endfor %}
+    </div>
+  </div><br>
+
+  <br><br>
+
+</body>
+
+</html>

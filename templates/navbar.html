@@ -1,0 +1,32 @@
+
+
+<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+    <div class="sb-sidenav-menu">
+        <div class="nav">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Year <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li role="presentation"><a class="dropdown-item" href="/year/2022">2022</a></li>
+                        <li role="presentation"><a class="dropdown-item" href="/year/2023">2023</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Categories <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% for category in categories_list%}
+                        <li role="presentation"><a class="dropdown-item" href="/category/"{{category}}> {{category}} </a></li>
+                        {%endfor%}
+                    </ul>
+                </li>
+                
+        </div>
+        <div class="sub_nav">
+        </div>
+    </div>
+</nav>
