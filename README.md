@@ -1,13 +1,13 @@
 # Finance Depictor Project
 
 ## Overview
-The Finance Depictor is a Python-based web application built with Flask, designed to visualize and categorize financial transactions extracted from PDFs. It allows users to view transaction data categorized by year, month, and category, and provides insights into different categories of spending.
+The Finance Depictor is a Python-based web application built with Flask, designed to visualise and categorise financial transactions extracted from PDFs. It allows users to view transaction data categorised by year, month, and category, and provides insights into different categories of spending.
 
 ## Features
 - **PDF Processing**: Extracts transaction data from PDF statements using the `PDFContentConverter` and processes it into structured data.
-- **Categorization**: Organizes transactions into predefined categories and subcategories. Users can add or remove categories and keywords.
-- **Visualization**: Displays transaction data through various views including yearly summaries, monthly breakdowns, and specific category analyses.
-- **Caching**: Utilizes caching to improve performance and manage previously processed data.
+- **Categorisation**: Organises transactions into predefined categories and subcategories. Users can add or remove categories and keywords.
+- **Visualisation**: Displays transaction data through various views, including yearly summaries, monthly breakdowns, and specific category analyses.
+- **Caching**: Utilises caching to improve performance and manage previously processed data.
 
 ## Components
 - **Flask Application (`app.py`)**:
@@ -15,7 +15,7 @@ The Finance Depictor is a Python-based web application built with Flask, designe
   - Routes include year-based views, monthly breakdowns, category views, and more.
 
 - **Category Management (`category_manager.py`)**:
-  - Handles category management including adding/removing categories and keywords, and saving/loading categories to/from JSON files.
+  - Handles category management, including adding/removing categories and keywords, and saving/loading categories to/from JSON files.
 
 - **Category Functions (`category_functions.py`)**:
   - Provides functionality for processing and aggregating transaction data based on categories and years.
@@ -34,7 +34,11 @@ The Finance Depictor is a Python-based web application built with Flask, designe
 - pandas
 - numpy
 - PDFContentConverter
-- (Any other specific libraries you use)
 
-## Contributing
-Contributions are welcome! Please ensure that any changes are thoroughly tested and reviewed.
+## TODOs
+- unit tests
+- add documentation
+- add AI API call to add a suggestion on where to save.
+- improve UI
+- containerise
+- look into OFX files instead of pdf files from each bank
