@@ -36,6 +36,7 @@ The Finance Depictor is a Python-based web application built with Flask, designe
 - PDFContentConverter
 
 ## TODOs
+- design SQLite database
 - unit tests
 - add documentation
 - add AI API call to add a suggestion on where to save.
