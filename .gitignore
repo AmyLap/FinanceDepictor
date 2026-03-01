@@ -1,7 +1,46 @@
-/venv
-venv*
-venv
-documents
+# Virtual Environments
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.env
+
+# Database (contains user data, passwords)
+finance.db
+*.db
+
+# Logs and temp files
+temp_*
+*.tmp
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Misc
+documents/
 /documents
-.vscode*
-*__pycache__*
